@@ -5,8 +5,8 @@
 | Where you work | Best starting point |
 | --- | --- |
 | Codex, Claude Code, Cursor, or another supported local app | Use the skills.sh installer below. |
-| ChatGPT in a browser | Follow the three-step chat guide for [Google Ads](../skills/pi-google-ads-audit/#use-in-chatgpt-no-installation) or [competitive research](../skills/pi-competitive-research/#use-in-chatgpt-no-installation). No terminal required. |
-| Claude's regular web or desktop chat | Attach a chat guide, or use the optional ZIP upload in the [Ads](../skills/pi-google-ads-audit/#use-in-claude-chat) or [competitor](../skills/pi-competitive-research/#use-in-claude-chat) instructions. |
+| ChatGPT in a browser | Follow the three-step chat guide for [Google Ads](../skills/pi-google-ads-audit/README.md#use-in-chatgpt-no-installation) or [competitive research](../skills/pi-competitive-research/README.md#use-in-chatgpt-no-installation). No terminal required. |
+| Claude's regular web or desktop chat | Attach a chat guide, or use the optional ZIP upload in the [Ads](../skills/pi-google-ads-audit/README.md#use-in-claude-chat) or [competitor](../skills/pi-competitive-research/README.md#use-in-claude-chat) instructions. |
 
 ## Install with skills.sh
 
@@ -41,10 +41,10 @@ To install only one skill, add `--skill pi-google-ads-audit` or `--skill pi-comp
 ## Check that it worked
 
 1. The installer should name the installed skill and its destination.
-2. Start a new task in the app you selected. Ask: **“Use pi-competitive-research. Confirm you can load the skill, then ask for my firm website and target city.”** Substitute `pi-google-ads-audit` if that is the one you installed.
+2. Start a new task in the app you selected. Ask: **“Use pi-competitive-research. Confirm you can load the skill, then ask for the inputs you need for my first report.”** Substitute `pi-google-ads-audit` if that is the one you installed.
 3. The assistant should identify the skill and ask for the relevant inputs. If it says it cannot load the skill, use the troubleshooting table below.
 
-Then follow the [Ads first-report prompt](../skills/pi-google-ads-audit/#your-first-report) or [competitive research first-report prompt](../skills/pi-competitive-research/#your-first-report). Installing a skill does not connect your Google account or add web browsing; the skill works with the tools and files your assistant can access.
+Then follow the [Ads first-report prompt](../skills/pi-google-ads-audit/README.md#your-first-report) or [competitive research first-report prompt](../skills/pi-competitive-research/README.md#your-first-report). Installing a skill does not connect your Google account or add web browsing; the skill works with the tools and files your assistant can access.
 
 ## Troubleshooting
 

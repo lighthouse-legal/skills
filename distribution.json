@@ -1,0 +1,26 @@
+{
+  "pi-google-ads-audit": [
+    "SKILL.md",
+    "README.md",
+    "agents/openai.yaml",
+    "references/account-access.md",
+    "references/analysis-guide.md",
+    "references/exports-and-math.md",
+    "references/report-template.md",
+    "scripts/summarize_ads_csv.py",
+    "examples/firm-context.md",
+    "examples/campaigns.csv",
+    "examples/search-terms.csv",
+    "examples/sample-findings.md"
+  ],
+  "pi-competitive-research": [
+    "SKILL.md",
+    "README.md",
+    "agents/openai.yaml",
+    "references/evidence-guide.md",
+    "references/search-and-ads.md",
+    "references/auction-insights.md",
+    "assets/report-template.md",
+    "examples/synthetic-report.md"
+  ]
+}

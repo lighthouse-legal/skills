@@ -1,0 +1,8 @@
+Campaign report — fictional example
+August 1, 2026 - August 30, 2026
+Campaign ID,Campaign,Campaign status,Campaign type,Currency code,Cost,Clicks,Impr.,Conversions,All conv.
+101,Brand,Enabled,Search,USD,300.00,100,2000,10.00,18.00
+102,Auto injury,Enabled,Search,USD,6000.00,200,5000,12.50,25.00
+103,Work injury,Paused,Search,USD,1200.00,40,1600,0.00,2.00
+104,Display awareness,Enabled,Display,USD,500.00,250,50000,0.00,20.00
+,Total: Account,,,USD,8000.00,590,58600,22.50,65.00

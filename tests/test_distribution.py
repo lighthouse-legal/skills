@@ -68,6 +68,49 @@ class DistributionTests(unittest.TestCase):
             with zipfile.ZipFile(packages[0][0]) as archive:
                 self.assertEqual(set(archive.namelist()),
                                  {"test-skill/SKILL.md", "test-skill/README.md", "test-skill/LICENSE"})
+            guide = (root / "dist/test-skill-chat-guide.txt").read_text()
+            self.assertNotIn("synthetic private sentinel", guide)
+
+    def test_chat_guides_are_complete_and_embedded_helper_can_run(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            PACKAGE.package_all(output)
+            manifest = json.loads((ROOT / "distribution.json").read_text())
+            for name, members in manifest.items():
+                guide = (output / f"{name}-chat-guide.txt").read_text()
+                embedded = dict(re.findall(
+                    r"===== BEGIN FILE: (.+?) =====\n(.*?)\n===== END FILE: \1 =====",
+                    guide, re.S,
+                ))
+                expected = {member for member in members
+                            if member != "README.md" and not member.startswith("agents/")}
+                self.assertEqual(set(embedded), expected | {"LICENSE"})
+                for member in expected:
+                    self.assertEqual(embedded[member], (ROOT / "skills" / name / member).read_text())
+                if name == "pi-google-ads-audit":
+                    script = output / "embedded_helper.py"
+                    script.write_text(embedded["scripts/summarize_ads_csv.py"])
+                    data = output / "campaigns.csv"
+                    data.write_text(embedded["examples/campaigns.csv"])
+                    run = subprocess.run(
+                        [sys.executable, str(script), str(data), "--currency", "USD"],
+                        cwd=output, capture_output=True, text=True, check=True,
+                    )
+                    self.assertEqual(json.loads(run.stdout)["totals"]["cost"], "8000.00")
+
+    def test_download_checksums_cover_every_deliverable_and_are_repeatable(self):
+        import hashlib
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            PACKAGE.package_all(output)
+            first = {path.name: path.read_bytes() for path in output.iterdir()}
+            entries = (output / "SHA256SUMS").read_text().splitlines()
+            self.assertEqual(len(entries), 4)
+            for entry in entries:
+                digest, name = entry.split("  ")
+                self.assertEqual(digest, hashlib.sha256((output / name).read_bytes()).hexdigest())
+            PACKAGE.package_all(output)
+            self.assertEqual(first, {path.name: path.read_bytes() for path in output.iterdir()})
 
     def test_manifest_rejects_traversal_hidden_and_symlink_members(self):
         with tempfile.TemporaryDirectory() as directory:

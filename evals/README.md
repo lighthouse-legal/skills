@@ -6,6 +6,24 @@ Raw live-account reports stay outside this repository. All committed examples an
 
 Passing arithmetic or metadata checks alone does not establish that an agent gave a useful recommendation. Each report is reviewed for accurate sources, defensible interpretation, missing-data handling, and concrete next steps.
 
+## Version 0.2.0 onboarding review, September 25, 2026
+
+This update changes installation guidance and adds single-file chat guides. The two canonical skill workflows and the Ads calculation helper are unchanged.
+
+| Evaluation | Method | Result and scope |
+| --- | --- | --- |
+| First-use clarity | Two independent, fresh Codex readers traced an ordinary ChatGPT user's path and the skills.sh path | Removed manual instruction-file assembly, added practical starting prompts and an agency export request, and separated browser chats from local installation. Final review found no blocker; a minor mismatch in the installation-check prompt was corrected. |
+| skills.sh discovery and installation | Current published `skills` 1.7.0, Node 24.19.0, npm 11.17.0; disposable project directories | `--list` found both skills. Both complete folders installed for Codex and matched the public source byte for byte. All local resource links resolved. Claude Code filesystem placement was also verified without launching Claude. |
+| Native Codex after skills.sh installation | Fresh Codex CLI 0.149.1; name-only request from the installed project | Loaded the competitive-research skill and a bundled reference successfully. This was discovery verification, not a second live-market study. |
+| Global options and ordinary-terminal prompts | Inspected the published CLI and executed only its option parsers in isolation | Global list/update syntax and the conditional skill/app/method prompts were verified. Global installation and the complete interactive wizard were not executed; no user's global skills were changed. |
+| Ads single-file guide | Fresh Codex context given only the generated text guide and incomplete/adversarial raw inputs | Completed the audit, extracted and ran the embedded helper on both files, preserved unknown metrics, and avoided invalid cross-period arithmetic. No extra instruction files were needed. |
+| No-account Ads trial | Another fresh Codex context given only the text guide and the README's fictional-demo prompt | Produced three findings, recalculated $8,000 spend and 67.3% Search-term spend coverage from the embedded inputs, and required no extra files. The guide also contains a sample report, so this is an onboarding exercise, not a blind accuracy benchmark. |
+| Competitive single-file guide | Separate fresh Codex context given only the generated text guide and supplied snapshots | Completed a sourced comparison with four proposed experiments; preserved source/access limits and did not infer an untapped market. No extra instruction files were needed. |
+| GitHub reading experience | Actual in-app browser navigation and rendered README inspection | Caught folder redirects that dropped section fragments. Entry links now target README files directly, keeping the chat steps and first-report prompt easy to reach. |
+| Distribution checks | Standard-library tests, extracted ZIPs, single-file guide extraction, and checksums | 27 tests passed. The helper extracted from the text guide produced the expected fictional result. Both guides include only allowlisted source material, and all four download checksums are reproducible. |
+
+All model execution in this review used Codex. The chat-guide tests simulate an attached file through Codex's file tools; they do **not** verify ChatGPT/Claude's hosted upload interface, parsing, code execution, or browsing. Those product routes remain documented options. Install tests used project scope, with telemetry disabled; they do not establish a skills.sh directory listing or global installation. The public GitHub installation command works independently of directory indexing.
+
 ## Version 0.1.0 evaluation, September 25, 2026
 
 | Evaluation | Method | Result and scope |

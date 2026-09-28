@@ -6,6 +6,19 @@ Raw live-account reports stay outside this repository. All committed examples an
 
 Passing arithmetic or metadata checks alone does not establish that an agent gave a useful recommendation. Each report is reviewed for accurate sources, defensible interpretation, missing-data handling, and concrete next steps.
 
+## Version 0.2.1 simple setup review, September 28, 2026
+
+The READMEs now start with a short prompt and a direct link to `SKILL.md`. The skills.sh command comes second; downloads and troubleshooting live in setup help. Both skills explain how to fetch supporting files from a link or use them from an attachment.
+
+| Evaluation | Result and scope |
+| --- | --- |
+| Link-only starting prompts | Separate fresh Codex contexts loaded each public candidate guide without installation, uploads, or account access. Competitive research asked for the firm, market, practice areas, and decision. The Ads reader also followed two relative reference links. |
+| Simpler Ads opening | The initial reply asked for too many technical details. After tightening the first-use instructions, another Codex reader used the updated guide and asked only for the website, service area/case types, and an existing report, offering help obtaining one. A cached branch response was resolved with an immutable commit URL. No report or account audit was attempted. |
+| Sources and reading experience | All 11 directly linked skill/reference files fetched anonymously and matched the final source at immutable URLs. Actual GitHub browser inspection confirmed the short prompt appears before technical setup and the previous ChatGPT section bookmark still lands on the new instructions. |
+| Regression and distribution checks | All 27 automated tests passed. Skill metadata and local links validated; ZIPs and text guides were rebuilt from the current source. |
+
+All model execution used Codex. These are checks of link retrieval and the opening exchange, not new full-account or live-market evaluations. Hosted ChatGPT and Claude behavior remains unverified.
+
 ## Version 0.2.0 onboarding review, September 25, 2026
 
 This update changes installation guidance and adds single-file chat guides. The two canonical skill workflows and the Ads calculation helper are unchanged.

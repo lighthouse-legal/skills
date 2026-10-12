@@ -1,171 +1,106 @@
-# PI competitive research
+# Competitive research for personal injury firms
 
-See how your personal injury firm presents itself alongside local competitors, with sources you can check.
+**See how your firm compares with local competitors—and what to improve next.** Give your AI assistant your website, city, and priority case types. It will compare public messaging, show its sources, and suggest changes worth testing.
 
-This free skill guides an AI assistant through a focused comparison of your firm's website, nearby firms, public advertising, and local search results. It is designed for owners, managing partners, office managers, marketing staff, and agencies preparing for a website update or marketing review.
+| You provide | You get |
+| --- | --- |
+| Your website, target city, and case types | A comparison with up to five relevant firms. |
+| Competitor names, if you have them | A closer look at the firms you care about. Otherwise, the assistant selects and explains a relevant set. |
 
-Published by [Lighthouse](https://www.lighthouselegal.ai), which builds voice AI intake for personal injury firms. You do not need a Lighthouse account. The report's recommendations follow the evidence and your business question.
+**Choose your starting point:** [Install with skills.sh](#install-with-skillssh-recommended) · [Use in ChatGPT without installing](#use-in-chatgpt-no-installation) · [Use in Claude chat](#use-in-claude-chat)
 
-## What you receive
+Free to use. No Lighthouse account, advertising account, or paid research subscription required. Your AI provider's usual plan and usage limits apply.
 
-- A short executive brief with supported findings, strengths, and unanswered questions.
-- A comparison matrix covering positioning, practice areas, geography, language claims, contact options, and published availability.
-- Separate observations for Paid Search, Local Services Ads, Maps/local results, and organic results where they can be inspected.
-- Three to five proposed experiments, each with an owner, scope, measurement plan, and decision rule.
-- An evidence appendix with source links, dates, methods, search conditions, and any review-sampling limits.
+## Install with skills.sh (recommended)
 
-The default scope is your firm plus up to five comparison firms in one market, with up to three priority practice areas. You can name competitors or let the assistant find and explain a relevant set. Start with one market so the comparison stays useful.
-
-See the [report template](assets/report-template.md) and [fictional sample](examples/synthetic-report.md). The sample demonstrates the format with invented firms and incomplete evidence; it is not a real research result.
-
-## What you need
-
-Provide your firm's website, a city or metro area with its state/country, the case types that matter, and the decision you want to make. Optional inputs include competitor names, languages of interest, and a redacted export from your own Google Ads account.
-
-Use an assistant with web access for current research. A browser or research tool may expose only some search channels. The assistant should complete the website comparison and identify unavailable channels instead of guessing. If web access is unavailable, you can supply saved pages, screenshots, or excerpts for a comparison of those materials; the result should state their dates and avoid claiming current coverage.
-
-The skill itself is free and includes no paid data dependency. Your AI provider's plan limits, browsing availability, and usage charges still apply. No advertising account or Auction Insights export is required.
-
-## Install or use it
-
-This folder is the complete skill: keep `SKILL.md`, `references/`, and `assets/` together. The `agents/` folder supplies optional Codex display information; the workflow does not require it in other assistants. The README and example are for people learning the workflow.
-
-Installation guidance below was checked against provider documentation on September 25, 2026. Hosted upload acceptance for this package has not yet been verified. Current test status and broader setup guidance belong in the [repository guide](https://github.com/lighthouse-legal/skills#readme).
-
-### Get the folder or ZIP
-
-Use the individual `pi-competitive-research.zip` from [Releases](https://github.com/lighthouse-legal/skills/releases) when available. If downloading the repository through GitHub's **Code → Download ZIP**, extract it first and locate `skills/pi-competitive-research`. For a Claude upload, compress that complete folder as its own ZIP; the archive should contain a top-level `pi-competitive-research/` folder with `SKILL.md` inside it. Do not upload the whole repository as one skill. [Claude packaging guidance](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills).
-
-For local clients, you can instead download with Git:
+Use this if you work in **Codex, Claude Code, or another supported app on your computer**. Open Terminal on macOS or PowerShell on Windows and run:
 
 ```sh
-git clone https://github.com/lighthouse-legal/skills.git lighthouse-skills
-cd lighthouse-skills
+npx skills add lighthouse-legal/skills --skill pi-competitive-research --global
 ```
 
-### ChatGPT workspace Skills
+If the installer asks which apps to use, choose yours; Codex may already appear as included. Complete the prompts. Start a new task with web access and paste [the prompt below](#your-first-report). If `npx` is not recognized, see [installation help](https://github.com/lighthouse-legal/skills/blob/main/docs/installation.md). No GitHub account or manual ZIP download is needed.
 
-In an eligible Business, Enterprise, Healthcare, or Edu workspace, with the required permissions:
+Using ChatGPT at chatgpt.com? Follow the next section instead; a terminal installation does not add a skill to a browser chat.
 
-1. Open **Plugins → Skills → Create → Upload from your computer**.
-2. Upload the skill package accepted by that control and complete the scan or review it presents.
-3. Confirm that the skill appears as installed. Start a new conversation and ask ChatGPT to use `pi-competitive-research` with the brief below.
+## Use in ChatGPT (no installation)
 
-This is the documented workspace route. OpenAI's public help does not specify the exact accepted ZIP member layout, so the single-folder ZIP's acceptance remains unverified until a successful upload in the relevant workspace. If the upload control requires another package type, follow its current instructions. If Skills is missing, check account eligibility and workspace permissions. A chat attachment is a separate way to supply instructions; it does not demonstrate native installation. [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt), [OpenAI skill controls](https://learn.chatgpt.com/docs/enterprise/skills).
+1. **[Download the competitive research chat guide](https://github.com/lighthouse-legal/skills/releases/latest/download/pi-competitive-research-chat-guide.txt).** It is one text file containing the full workflow. You do not need to read or edit it.
+2. **[Open a new ChatGPT chat](https://chatgpt.com/)** and use the attachment button beside the message box to add the guide. Choose a chat with web search or research available so it can inspect current websites.
+3. **Paste the prompt below**, replace the bracketed details, and send it. You do not need to collect competitor websites first.
 
-### Claude web or desktop
+This uses the workflow in that conversation; it is not a permanent skill installation. Reattach the guide in a new chat. If attachments are unavailable, open the guide and paste its text. If web access is unavailable, the assistant can compare pages or screenshots you supply, but cannot claim to have researched current competitors.
 
-Claude's documented Skills feature includes Free, Pro, Max, Team, and Enterprise, subject to account and organization controls:
-
-1. Enable **Code execution and file creation** in your capabilities settings where required.
-2. Open **Customize → Skills → + → Create skill → Upload a skill**.
-3. Upload the single-folder ZIP and enable the skill.
-4. Start a new conversation and ask Claude to use `pi-competitive-research` with your brief. Make web search available for current research.
-
-Enterprise administrators may need to enable Skills and cloud code execution. A successful upload does not add web or advertising-account permissions. [Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude), [Claude web search](https://support.claude.com/en/articles/10684626-enable-and-use-web-search).
-
-### Codex: local installation
-
-With Codex installed and signed in, copy the whole skill folder into your personal skills directory. For a first installation on macOS or Linux, run these commands from the downloaded repository root:
-
-```sh
-mkdir -p "$HOME/.agents/skills"
-cp -R skills/pi-competitive-research "$HOME/.agents/skills/"
-```
-
-For a project-only installation, place the folder inside that project's `.agents/skills/` instead. Start a Codex task in your research workspace and enter this as a **prompt**, not a shell command:
+## Your first report
 
 ```text
-$pi-competitive-research
-```
-
-Add your firm brief to that prompt. Codex detects skills automatically; restart if the skill does not appear. The CLI and IDE extension also have a `/skills` picker. [Official OpenAI skill documentation](https://learn.chatgpt.com/docs/build-skills).
-
-### Claude Code: local installation
-
-With Claude Code installed and authenticated, run from the downloaded repository root for a first installation:
-
-```sh
-mkdir -p "$HOME/.claude/skills"
-cp -R skills/pi-competitive-research "$HOME/.claude/skills/"
-```
-
-For a project-only installation, use `.claude/skills/` in that project. Start Claude Code in your research workspace and invoke `/pi-competitive-research`, followed by your brief. Claude web's Free Skills availability does not imply free Claude Code access. [Claude Code skills](https://code.claude.com/docs/en/skills), [Claude Code setup](https://code.claude.com/docs/en/quickstart).
-
-On Windows, copy the complete folder with File Explorer or PowerShell into `.agents/skills` for Codex or `.claude/skills` for Claude Code under your user home directory. For updates, replace the existing skill folder intentionally rather than merging old and new files. Keep personal reports outside the installed skill folder.
-
-### Use as a portable research brief
-
-If your assistant cannot install custom skills, attach `SKILL.md`, all three files in `references/`, and `assets/report-template.md` to a conversation or project that supports readable file attachments. Explicitly ask it to read those instructions and follow them for your brief. If attachments are not readable, paste the relevant instructions instead. This is a manual workflow, not automatic skill discovery.
-
-For any route, a pasted GitHub URL alone does not guarantee the assistant loaded the skill or its references. Installation also does not create new browsing capabilities. Ask it to identify which files it loaded and which research channels it can inspect before it reports results.
-
-## Start your first report
-
-Copy this and replace the bracketed fields:
-
-```text
-Use pi-competitive-research to compare our firm with local competitors.
+Use the pi-competitive-research skill or attached competitive
+research chat guide.
 
 Our website: [https://your-firm.com]
-Market: [city/metro, state, country]
-Priority case types: [for example, car crashes and truck crashes]
-Decision: [for example, what should we clarify in our next website update?]
-Competitors: [names/URLs, or choose up to five and explain the selection]
-Languages of interest: [optional]
+Market: [city, state, country]
+Priority cases: [for example, car accidents and truck accidents]
+Decision: What should we improve in our website messaging?
+Competitors: Choose up to five relevant local firms and explain why.
+Languages to consider: [optional]
 
-Give me the executive brief, comparison matrix, three to five proposed
-experiments, and source appendix. Record what you actually inspect.
-Keep Paid Search, Local Services Ads, Maps, and organic results separate.
+Confirm that you can read the guide or installed skill and access
+current websites. Compare our firm with the selected competitors.
+Give me a short summary, comparison table, three to five ideas to
+test, and links to the evidence. Be clear about what you could not
+check. Do not contact anyone or change any accounts.
 ```
 
-Useful follow-ups:
+**A useful result:** a report you can discuss with your marketing team, covering practice-area focus, local presence, language claims, contact options, and published availability. If advertising or search results are visible, those observations appear separately with their limitations.
 
-```text
-Which two findings are best supported? Show me their exact sources and
-what you could not verify before I discuss them with our agency.
-```
+For example, a competitor's Spanish page might prompt you to explain your own Spanish intake more clearly—after confirming your team offers it. It does not prove an untapped market or that the competitor has better service.
 
-```text
-Repeat the same comparison for the same firms and query conditions.
-Separate actual changes from differences in the new research sample.
-```
+## What the assistant researches
 
-```text
-I have attached a redacted Auction Insights CSV for [date range].
-Explain what it adds to the report and what it cannot tell us.
-Keep its campaign scope separate from public search observations.
-```
+The default comparison covers your firm and up to five others in one market, focused on up to three case types. It reviews comparable home, practice/location, and contact pages, then records the source and date for each material observation.
 
-The assistant may ask for a missing market or a material ambiguity. It should otherwise state reasonable research choices and proceed. If a site is blocked, it should continue with accessible information and disclose the gap.
+Where accessible, it checks Paid Search, Local Services Ads, Maps/local results, and organic search separately. Google results vary by location and session, so a small sample is not a permanent ranking. If ads or listings cannot be inspected, you still receive the website comparison.
 
-## How it works
+Public reviews are optional. If used, the report describes which reviews were sampled and how limited that sample is. It does not treat a handful of visible reviews as representative of every client.
 
-The assistant verifies relevant firms, reviews comparable public pages, and builds an evidence ledger. It records what each source says and keeps interpretation separate. The same claim can have different meanings: a Spanish page, an advertised bilingual team, and owner-confirmed Spanish intake are different observations.
+You do not need an advertising export. Your own Auction Insights report can add context if you already have one, but it cannot reveal competitors' actual budgets or profits. [Optional export guidance](references/auction-insights.md).
 
-For searches, it records the exact query, date, target geography, tool, and observer location when known. The city typed into a query is not proof that Google treated the search as coming from that city. A generic AI search result list is useful for finding firms but is not a verified Google ranking.
+## Use in Claude chat
 
-Public ad libraries are optional. Their creative records are reported separately from ads actually observed for local queries. If reviews are accessible, the assistant explains the sample's size, selection rule, dates, and bias. Five visible review texts do not represent every client.
+For Claude's regular web or desktop chat, attach the same [single chat guide](https://github.com/lighthouse-legal/skills/releases/latest/download/pi-competitive-research-chat-guide.txt), enable web search if available, and send the first-report prompt.
 
-The assistant then proposes small changes or investigations that follow from the evidence. A missing language-service statement might motivate a message test after you confirm the service is offered. It does not prove an untapped market or that a competitor has better service.
+For a reusable Claude skill, download the [skill ZIP](https://github.com/lighthouse-legal/skills/releases/latest/download/pi-competitive-research.zip). Enable **Code execution and file creation**, then open **Customize → Skills → + → Create skill → Upload a skill**. Upload and enable the ZIP, start a new chat, and ask for `pi-competitive-research`. See [Claude's current instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude). Claude Code uses the skills.sh command above.
 
-## Boundaries and privacy
+## Common questions
 
-This is public-information research. It does not contact competitors, submit forms, conduct mystery-shop calls, click sponsored contact actions, impersonate clients, or change any website, listing, or account. Experiments are proposals for you to review; they are not executed by the skill.
+**Do I need to know my competitors?** No. Provide your own website, market, and case types; the assistant can find and explain a relevant set with web access.
 
-The report compares public communication. It does not determine legal competence, certify advertising compliance, estimate case value, or establish a competitor's actual budgets, acquisition costs, signed cases, profitability, or demand. Source failures appear as unavailable, not as evidence that a firm lacks a service or runs no ads.
+**Does it need my Google Ads account?** No. The main workflow uses public information.
 
-Only share information your organization is comfortable giving to your chosen AI provider. Redact client details, account identifiers, and unnecessary business data from exports. The workflow does not require client records, passwords, or call recordings. Keep actual reports and exports in your own workspace; do not add them to this public repository.
+**Will it call competitors or fill out their forms?** No. It reads public information and proposes changes for your own team to consider.
 
-## Files and optional resources
+**Can it tell me how much competitors spend?** No. Seeing an ad does not reveal spend, signed cases, profitability, or demand. Website claims also do not prove actual staffing or service quality.
+
+**The assistant says a page or listing is blocked.** Ask it to continue with accessible sources and label the gap. Missing evidence is not proof that a competitor lacks a service or runs no ads.
+
+**The assistant cannot find the installed skill.** Start a new task and ask for `pi-competitive-research` by name. In Codex, you can type `$pi-competitive-research`; in Claude Code, `/pi-competitive-research`. [More setup help](https://github.com/lighthouse-legal/skills/blob/main/docs/installation.md).
+
+**Can I repeat the report later?** Yes. Ask it to use the same firms, market, and search conditions, then distinguish verified changes from differences in the new sample.
+
+## Examples, details, and limits
+
+See the [fictional sample report](examples/synthetic-report.md) for the output format. It contains invented firms and evidence, not a live market assessment.
 
 | File | Purpose |
 | --- | --- |
-| [SKILL.md](SKILL.md) | Main instructions and research boundaries |
-| [Evidence guide](references/evidence-guide.md) | Page coverage, source ledger, review sampling, experiments |
-| [Search and ads guide](references/search-and-ads.md) | Query conditions, channel distinctions, public creative, access limits |
-| [Auction Insights guide](references/auction-insights.md) | Optional export interpretation and reporting limits |
-| [Report template](assets/report-template.md) | Reusable deliverable structure |
-| [Fictional example](examples/synthetic-report.md) | Compact illustration with clearly invented evidence |
+| [SKILL.md](SKILL.md) | Instructions followed by the assistant |
+| [Evidence guide](references/evidence-guide.md) | Comparable page coverage, source records, review sampling, experiments |
+| [Search and ads guide](references/search-and-ads.md) | Channel distinctions, location limits, public ad records |
+| [Auction Insights guide](references/auction-insights.md) | Optional advertising export interpretation |
+| [Report template](assets/report-template.md) | Structure for the finished report |
 
-This original workflow uses existing public resources where useful. [Google Ads Transparency Center](https://adstransparency.google.com/) can provide creative records, and [BrightLocal's free local SEO tools](https://www.brightlocal.com/free-local-seo-tools/) include a local results checker. Availability and tool conditions can change; neither is required to finish a website comparison. Definitions and source links appear in the relevant guides.
+The skill supplies a research process; your AI assistant supplies browsing and analysis tools. It does not judge attorney competence, estimate case value, or certify advertising compliance. Keep client details and private exports out of public GitHub issues. [Test results](https://github.com/lighthouse-legal/skills/blob/main/evals/README.md) distinguish executed tests from documented options; hosted ChatGPT/Claude uploads remain unverified.
+
+## From Lighthouse
+
+[Lighthouse](https://www.lighthouselegal.ai) builds voice AI intake for personal injury firms. We publish free tools for other parts of running a firm, too. This skill is MIT licensed and works without a Lighthouse account.

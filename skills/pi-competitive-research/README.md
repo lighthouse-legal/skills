@@ -29,7 +29,7 @@ Using ChatGPT at chatgpt.com? Follow the next section instead; a terminal instal
 2. **[Open a new ChatGPT chat](https://chatgpt.com/)** and use the attachment button beside the message box to add the guide. Choose a chat with web search or research available so it can inspect current websites.
 3. **Paste the prompt below**, replace the bracketed details, and send it. You do not need to collect competitor websites first.
 
-This uses the workflow in that conversation; it is not a permanent skill installation. Reattach the guide in a new chat. If attachments are unavailable, open the guide and paste its text. If web access is unavailable, the assistant can compare pages or screenshots you supply, but cannot claim to have researched current competitors.
+The guide applies to this conversation. Attach it again when starting a new chat. [Having trouble attaching it?](https://github.com/lighthouse-legal/skills/blob/main/docs/installation.md#troubleshooting)
 
 ## Your first report
 
@@ -80,6 +80,8 @@ For a reusable Claude skill, download the [skill ZIP](https://github.com/lightho
 **Will it call competitors or fill out their forms?** No. It reads public information and proposes changes for your own team to consider.
 
 **Can it tell me how much competitors spend?** No. Seeing an ad does not reveal spend, signed cases, profitability, or demand. Website claims also do not prove actual staffing or service quality.
+
+**My chat cannot browse the web.** Supply saved pages or screenshots. The assistant can compare those materials and their dates, but should not claim to have researched current websites or search results.
 
 **The assistant says a page or listing is blocked.** Ask it to continue with accessible sources and label the gap. Missing evidence is not proof that a competitor lacks a service or runs no ads.
 

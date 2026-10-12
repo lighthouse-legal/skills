@@ -29,7 +29,7 @@ Using ChatGPT at chatgpt.com? Follow the next section instead; a terminal instal
 2. **[Open a new ChatGPT chat](https://chatgpt.com/)** and use the attachment button beside the message box to add the guide and your Ads reports. A spreadsheet export ending in `.csv` works well.
 3. **Paste the prompt below**, replace the bracketed details, and send it.
 
-This uses the workflow in that conversation; it is not a permanent skill installation. Reattach the guide in a new chat. If your account cannot attach files, you can open the guide and paste its text into the conversation, but numerical analysis still needs readable reports and calculation tools. ChatGPT should tell you what it could read before giving findings.
+The guide applies to this conversation. Attach it again when starting a new chat. [Having trouble attaching it?](https://github.com/lighthouse-legal/skills/blob/main/docs/installation.md#troubleshooting)
 
 ## Your first report
 
@@ -92,6 +92,8 @@ For a reusable Claude skill, download the [skill ZIP](https://github.com/lightho
 **Will it change my campaigns?** No. It reviews evidence and proposes actions for you or your agency.
 
 **Do I need to connect Google Ads?** No. Start with exported reports. An existing authorized browser connection or Google's Ads MCP can be used instead. [Optional connection setup](references/account-access.md).
+
+**I only have my agency's monthly PDF.** Start with that. Ask the assistant to confirm which tables it can read and give a preliminary review. CSV exports allow a more complete, reproducible calculation; use the agency request above when you need them.
 
 **What if I do not know my conversion setup?** Say “not sure.” The assistant can begin with the available reports and explain the measurement questions to resolve.
 

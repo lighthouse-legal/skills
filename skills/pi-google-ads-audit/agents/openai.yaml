@@ -1,0 +1,4 @@
+interface:
+  display_name: "PI Google Ads Audit"
+  short_description: "Review ad spend and priorities with account evidence"
+  default_prompt: "Use $pi-google-ads-audit to review my Google Ads performance and recommend the next improvements."

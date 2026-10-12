@@ -1,0 +1,10 @@
+Search terms report — fictional example
+August 1, 2026 - August 30, 2026
+Search term,Campaign ID,Campaign,Ad group,Keyword,Search term match type,Cost,Clicks,Impr.,Conversions
+example injury lawyers,101,Brand,Brand,[example injury lawyers],Exact,250.00,80,1400,8.00
+car accident lawyer near me,102,Auto injury,Auto,car accident lawyer,Phrase,2400.00,80,1800,6.50
+free consultation after car crash,102,Auto injury,Auto,car accident lawyer,Broad,900.00,30,700,3.00
+abogado accidente de auto,102,Auto injury,Auto,car accident lawyer,Broad,600.00,20,550,2.00
+car accident lawyer jobs,102,Auto injury,Auto,car accident lawyer,Broad,300.00,10,500,0.00
+work injury compensation lawyer,103,Work injury,Work,work injury lawyer,Phrase,600.00,20,700,0.00
+Total: Search terms,,,,,,5050.00,240,5650,19.50

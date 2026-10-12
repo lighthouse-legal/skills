@@ -1,0 +1,4 @@
+interface:
+  display_name: "PI Competitive Research"
+  short_description: "Compare local PI firms with checkable evidence"
+  default_prompt: "Use $pi-competitive-research to compare my personal injury firm with relevant local competitors and propose evidence-backed experiments."

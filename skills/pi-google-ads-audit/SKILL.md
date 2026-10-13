@@ -13,6 +13,8 @@ When reading this guide from a web link, resolve supporting file links relative 
 
 Use context or provided files for: business and website; desired clients/cases and exclusions; service geography; account; reporting dates; currency/time zone; and what counts as a useful conversion. Ask one concise bundled question only when missing information materially changes the task. Otherwise label assumptions and proceed with the available evidence. Never infer that a business is a PI firm from this skill's name.
 
+For a first-use request with no files or account access, start with the firm's website, service area/case types, and any ad report they already have. Use short, plain-language questions. Defer account IDs, currency/time zone, conversion settings, and detailed export columns until the data path is known; resolve required reporting details before making calculations. Offer help obtaining a report if needed.
+
 If multiple accounts are accessible and the intended one is ambiguous, resolve that before reading detailed account data. Default to the last 30 **complete** days in the account time zone, with the preceding equal-length period if available. State exact inclusive dates. Recent days may be incomplete because of conversion lag; use longer context when provided. Do not compare partial today to a complete day as a trend.
 
 ## 2. Select the available data path
@@ -20,7 +22,7 @@ If multiple accounts are accessible and the intended one is ambiguous, resolve t
 - **Connected Google Ads MCP:** read [account-access.md](references/account-access.md). Discover the actual tool schema and resource metadata before querying; use read operations only. Fetch scoped, bounded data and account totals before drilling down. Handle pagination/truncation explicitly.
 - **Exports or files:** read [exports-and-math.md](references/exports-and-math.md). Inventory dates, filters, columns, row grain, and missing reports. Use the bundled Python summarizer when compatible; otherwise calculate in the host's code environment with the same reconciliation rules. Do not demand a connector when files suffice.
 - **Authorized browser:** inspect the account and selected dates/filters directly. Read or download reports; changing the reporting date/filter is allowed. Do not apply recommendations, save account edits, click ads, or submit lead forms. Record the visible report scope and pagination. Treat an overview card or screenshot as a partial view, not a complete export. Do not claim a query ran when you read the UI.
-- **No account evidence:** produce a clearly labeled preliminary checklist and the smallest useful export request. Do not fabricate findings or call a generic checklist an account audit.
+- **No account evidence:** ask for the smallest useful evidence bundle. Offer a clearly labeled preliminary checklist if the user wants one; do not lead a first-use conversation with an audit checklist. Do not fabricate findings or call a generic checklist an account audit.
 
 Begin with campaign performance and conversion definitions; add search terms and settings when accessible. Missing Auction Insights, LSA, listings, or signed-case data should narrow the report, not block it.
 

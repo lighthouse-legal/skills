@@ -9,7 +9,7 @@
 
 **Choose your starting point:** [Install with skills.sh](#install-with-skillssh-recommended) · [Use in ChatGPT without installing](#use-in-chatgpt-no-installation) · [Use in Claude chat](#use-in-claude-chat)
 
-Free to use. No Lighthouse account or Google account connection required. Your AI provider's usual plan and usage limits apply.
+Free to use. No Lighthouse account or Google account connection required. Your AI provider's usual plan and usage limits apply. [No reports yet? Try the fictional example](#try-an-example-first).
 
 ## Install with skills.sh (recommended)
 
@@ -79,7 +79,17 @@ The campaign report and conversion explanation are enough to begin. The search-t
 
 ## Try an example first
 
-Use the fictional [firm details](examples/firm-context.md), [campaign report](examples/campaigns.csv), and [search-terms report](examples/search-terms.csv). On a GitHub file page, use **Download raw file** to save each input. Attach those three files along with the chat guide, or give them to your installed agent, and ask it to audit the fictional firm. No live account is needed. [Sample findings](examples/sample-findings.md) show the kind of output to expect; they are not an input to the audit.
+The chat guide and installed skill both include a complete fictional example. Attach just the [chat guide](https://github.com/lighthouse-legal/skills/releases/latest/download/pi-google-ads-audit-chat-guide.txt), or use your installed skill, then paste:
+
+```text
+Use pi-google-ads-audit or the attached guide to audit the bundled
+fictional example. Use examples/firm-context.md, examples/campaigns.csv,
+and examples/search-terms.csv, which are included in the skill or guide.
+Calculate from those inputs; do not copy examples/sample-findings.md.
+Label the result as fictional and show the three most useful findings.
+```
+
+You do not need your own reports or a Google account for this trial. The [sample findings](examples/sample-findings.md) also show the output format if you simply want to read an example.
 
 ## Use in Claude chat
 

@@ -1,32 +1,50 @@
 # Lighthouse skills for personal injury firms
 
-**Free instructions that help your AI assistant review Google Ads and research local competitors.** Get a practical report to discuss with your team or agency.
+A skill is a guide your AI assistant follows. These free skills help personal injury firms review Google Ads and compare local competitors.
 
-| Skill | What it does | What you provide |
-| --- | --- | --- |
-| [Google Ads audit](skills/pi-google-ads-audit/README.md) | Explains where ad spend goes, checks what counts as a conversion, and prioritizes improvements. | Google Ads reports from you or your agency. |
-| [Competitive research](skills/pi-competitive-research/README.md) | Compares local firms' websites and messaging, with sources and ideas to test. | Your website, city, and priority case types. |
+| Skill | What it helps you do |
+| --- | --- |
+| [Google Ads audit](skills/pi-google-ads-audit/README.md) | Understand your ad spending and prepare questions for your agency. |
+| [Competitive research](skills/pi-competitive-research/README.md) | Compare local firms and find ways to improve your marketing. |
 
-**Use ChatGPT in your browser?** Start with the no-install guide for [Google Ads](skills/pi-google-ads-audit/README.md#use-in-chatgpt-no-installation) or [competitive research](skills/pi-competitive-research/README.md#use-in-chatgpt-no-installation). No terminal or GitHub account needed.
+<a id="recommended-installation-skillssh"></a>
 
-## Recommended installation: skills.sh
+## Installation
 
-For **Codex, Claude Code, and other supported apps**, open your computer's Terminal (macOS) or PowerShell (Windows) and run:
+### No Install Setup
+
+Open a new ChatGPT chat, or another AI assistant that can open web links. Copy one of these prompts, including the link.
+
+**Google Ads audit**
+
+```text
+Help me review my Google Ads spending. Read this guide and ask any setup questions you need:
+https://raw.githubusercontent.com/lighthouse-legal/skills/main/skills/pi-google-ads-audit/SKILL.md
+```
+
+**Competitive research**
+
+```text
+Help me compare my firm with local competitors. Read this guide and ask any setup questions you need:
+https://raw.githubusercontent.com/lighthouse-legal/skills/main/skills/pi-competitive-research/SKILL.md
+```
+
+Then answer the assistant's questions. It will tell you what information to share. If it cannot open the guide, see [setup help](docs/installation.md#the-assistant-cannot-open-the-link).
+
+### Install with skills.sh
+
+For Codex, Claude Code, or another supported app, open Terminal on Mac or PowerShell on Windows and run:
 
 ```sh
 npx skills add lighthouse-legal/skills --global
 ```
 
-Select your skills and, if asked, your app. `--global` makes them available across your workspaces. You need [Node.js](https://nodejs.org/en/download) and [Git](https://git-scm.com/downloads); your IT team can handle this once. No GitHub account needed. [Setup help](docs/installation.md).
+Choose your skills and app if asked. Then start a new task and ask to use the skill. [Installation help](docs/installation.md#install-with-skillssh).
 
-For ChatGPT's browser chat or Claude's regular chat app, use the chat instructions in each skill's guide.
+## From Lighthouse
 
-After installation, start a new task and paste the first-report prompt from the [Ads guide](skills/pi-google-ads-audit/README.md#your-first-report) or [competitor guide](skills/pi-competitive-research/README.md#your-first-report).
+[Lighthouse](https://www.lighthouselegal.ai) builds voice AI intake for personal injury firms. We help firms answer calls, gather case details, and connect callers with their team.
 
-## Free from Lighthouse
+These skills are free and work without a Lighthouse account. Your AI provider's usual limits apply. The skills make recommendations; they do not change your accounts or send reports to Lighthouse.
 
-[Lighthouse](https://www.lighthouselegal.ai) builds voice AI intake for personal injury firms: answering calls, gathering the information each firm needs, and connecting priority callers with its team. These tools help with other parts of the business and require no Lighthouse account.
-
-Your AI provider's plan and usage limits apply. The skills make recommendations; they do not change your ads or contact competitors. Reports are not sent to Lighthouse by these tools.
-
-[Alternative ZIP downloads](https://github.com/lighthouse-legal/skills/releases/latest) · [Test results](evals/README.md) · [MIT license](LICENSE) · [Contributing](CONTRIBUTING.md)
+[Test results](evals/README.md) · [Other download options](https://github.com/lighthouse-legal/skills/releases/latest) · [MIT license](LICENSE) · [Contributing](CONTRIBUTING.md)

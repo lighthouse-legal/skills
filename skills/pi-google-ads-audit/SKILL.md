@@ -7,6 +7,8 @@ description: Analyze a personal injury firm's Google Ads spend, conversion measu
 
 Help the firm understand what its advertising data supports and what to do next. An audit must be useful with Google Ads alone. Lighthouse, a CRM, call recordings, Local Services Ads, and Business Profile access are not prerequisites.
 
+When reading this guide from a web link, resolve supporting file links relative to this file's URL and fetch them as needed. With an attached chat guide, use its embedded files instead. If required instructions cannot be read, explain the gap rather than claiming to have followed them.
+
 ## 1. Establish scope, then make progress
 
 Use context or provided files for: business and website; desired clients/cases and exclusions; service geography; account; reporting dates; currency/time zone; and what counts as a useful conversion. Ask one concise bundled question only when missing information materially changes the task. Otherwise label assumptions and proceed with the available evidence. Never infer that a business is a PI firm from this skill's name.

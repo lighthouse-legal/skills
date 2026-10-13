@@ -7,6 +7,8 @@ description: Research a personal injury law firm's public positioning and local 
 
 Help a firm owner or marketing lead see how the firm presents itself alongside relevant local competitors, with evidence they can check and changes they could test. This is a research workflow; no Lighthouse account or paid data service is required.
 
+When reading this guide from a web link, resolve supporting file links relative to this file's URL and fetch them as needed. With an attached chat guide, use its embedded files instead. If required instructions cannot be read, explain the gap rather than claiming to have followed them.
+
 ## Start with a usable brief
 
 Use the firm's URL, market (city/metro and state or country), priority practice areas, and the decision the report should inform. Competitor names, languages of interest, and the firm's own advertising exports are optional. Ask only for missing information that would materially change the comparison. If the firm serves several markets and none is specified, ask for one; meanwhile inspect its website. A website claim about a service is not confirmation that the user wants to prioritize it.
